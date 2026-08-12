@@ -21,6 +21,35 @@ class Consulta:
             print("Diagnóstico: [a definir]")
         print("----------------\n")
 
+class Pessoa:
+    def __init__(self, nome, idade, email):
+        self.nome = nome
+        self.idade = idade
+        self.email = email
+    
+    def exibir_info(self):
+        return f"Nome: {self.nome} | Idade: {self.idade} | Email: {self.email}"
+
+        
+class Medico(Pessoa):
+    def __init__(self, nome, idade, email, especialidade):
+        super().__init__(nome, idade, email)
+        self.especialidade = especialidade
+
+    def atender(self):
+        print ("O Médico {self.nome} está atendendo.")
+
+
+class Paciente(Pessoa):
+    def __init__(self, nome, idade, email, historico, marcar_consulta):
+        super().__init__(nome, idade, email)
+
+    def marcar_consulta(self, medico, data):
+        consulta = Consulta(data, self)
+
+    def exibir_consulta():
+        return True
+
 
 # ============================
 # Menu de Linha de Comando
