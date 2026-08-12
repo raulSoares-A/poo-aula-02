@@ -45,7 +45,7 @@ class Paciente(Pessoa):
         super().__init__(nome, idade, email)
 
     def marcar_consulta(self, medico, data):
-        consulta = Consulta(data, self)
+        consulta = Consulta(data, self, medico)
 
     def exibir_consulta():
         return True
