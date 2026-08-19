@@ -37,15 +37,17 @@ class Medico(Pessoa):
         self.especialidade = especialidade
 
     def atender(self):
-        print ("O Médico {self.nome} está atendendo.")
+        print (f"O Médico {self.nome} está atendendo.")
 
 
 class Paciente(Pessoa):
-    def __init__(self, nome, idade, email, historico, marcar_consulta):
+    def __init__(self, nome, idade, email, historico):
         super().__init__(nome, idade, email)
+        self.historico
 
     def marcar_consulta(self, medico, data):
         consulta = Consulta(data, self, medico)
+        return consulta
 
     def exibir_consulta():
         return True
@@ -77,7 +79,13 @@ while True:
 
     # Cadastrar Médico
     if opcao == "1":
-        ####### CRIE O CÓDIGO PARA CADASTRAR MÉDICO
+        nome = input("Nome do Médico: ")
+        idade = int (input("Idade do Médico: "))
+        email = 
+        especialidade = 
+        medico = 
+        medicos = 
+
         print("Médico cadastrado com sucesso!\n")
 
     # Cadastrar Paciente
